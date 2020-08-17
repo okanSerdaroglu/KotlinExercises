@@ -21,11 +21,25 @@ fun main() {
             continue // 5 does not print
 
         if (k == 3)
-            return
+            //return
 
         println(k)
     }
-    
+
+    println()
+    // break is in the inner for loop, when I write break in the inner loop
+    // only this breaks. However I want to break all loop. Therefore I have to
+    // give name the loops.
+
+    outerLoop@ for (i in 4..6){
+        for (j in 1..3){
+            if (i*j == 12){
+                break@outerLoop // breaks all the looping operation
+            }
+            println("$i * $j : " + (i*j))
+        }
+    }
+
 
 
 
