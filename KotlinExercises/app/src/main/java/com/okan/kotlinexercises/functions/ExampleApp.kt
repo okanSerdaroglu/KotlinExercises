@@ -15,7 +15,29 @@ fun main() {
             numberOne = firstNumber,
             numberTwo = secondNumber
         )
+
+        2 -> findDifference(
+            numberOne = firstNumber,
+            numberTwo = secondNumber
+        )
+
+        3 -> findMultiplication(
+            numberOne = firstNumber,
+            numberTwo = secondNumber
+        )
     }
+
+}
+
+fun findMultiplication(numberOne: Int, numberTwo: Int): Int {
+    println("Multiplication of $numberOne and $numberTwo = " + (numberOne * numberTwo))
+    return numberOne * numberTwo
+}
+
+fun findDifference(numberOne: Int, numberTwo: Int): Int {
+
+    println("Difference of $numberOne and $numberTwo = " + (numberOne - numberTwo))
+    return numberOne - numberTwo
 
 }
 
@@ -23,6 +45,7 @@ fun addNumbers(numberOne: Int, numberTwo: Int): Int {
     println("Sum of $numberOne and $numberTwo = " + (numberOne + numberTwo))
     return numberOne + numberTwo
 }
+
 
 fun showMenu(): Int {
 
