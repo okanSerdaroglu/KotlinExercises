@@ -1,33 +1,40 @@
 package com.okan.kotlinexercises.functions
 
+
 fun main() {
 
-    var menuID = showMenu()
+    while (true) {
+        var menuID = showMenu()
 
-    println("Enter Your First Number")
-    var firstNumber = readLine()!!.toInt()
+        if (menuID == 5) {
+            break
+        }
 
-    println("Enter Your Second Number")
-    var secondNumber = readLine()!!.toInt()
+        println("Enter Your First Number")
+        var firstNumber = readLine()!!.toInt()
 
-    when (menuID) {
-        1 -> addNumbers(
-            numberOne = firstNumber,
-            numberTwo = secondNumber
-        )
+        println("Enter Your Second Number")
+        var secondNumber = readLine()!!.toInt()
 
-        2 -> findDifference(
-            numberOne = firstNumber,
-            numberTwo = secondNumber
-        )
+        when (menuID) {
+            1 -> addNumbers(
+                numberOne = firstNumber,
+                numberTwo = secondNumber
+            )
 
-        3 -> findMultiplication(
-            numberOne = firstNumber,
-            numberTwo = secondNumber
-        )
+            2 -> findDifference(
+                numberOne = firstNumber,
+                numberTwo = secondNumber
+            )
+
+            3 -> findMultiplication(
+                numberOne = firstNumber,
+                numberTwo = secondNumber
+            )
+        }
     }
-
 }
+
 
 fun findMultiplication(numberOne: Int, numberTwo: Int): Int {
     println("Multiplication of $numberOne and $numberTwo = " + (numberOne * numberTwo))
@@ -58,8 +65,9 @@ fun showMenu(): Int {
     println("5 - Exit")
 
     println("******")
-
     println("Enter your choice")
+
+
     return readLine()!!.toInt()
 
 }
