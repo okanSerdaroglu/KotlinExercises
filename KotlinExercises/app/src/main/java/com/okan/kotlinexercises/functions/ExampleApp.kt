@@ -31,8 +31,18 @@ fun main() {
                 numberOne = firstNumber,
                 numberTwo = secondNumber
             )
+
+            4 -> findDivision(
+                firstNumber = firstNumber,
+                secondNumber = secondNumber
+            )
         }
     }
+}
+
+fun findDivision(firstNumber: Int, secondNumber: Int): Double {
+    println("$firstNumber / $secondNumber = " + (firstNumber / secondNumber))
+    return (firstNumber / secondNumber).toDouble()
 }
 
 
