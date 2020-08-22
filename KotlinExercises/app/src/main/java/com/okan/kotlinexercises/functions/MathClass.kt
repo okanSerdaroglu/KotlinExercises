@@ -16,6 +16,6 @@ fun main() {
 
     println((Math.random() * 100).toInt()) // this method generates number between 0 and 1
 
-    
+
 
 }
